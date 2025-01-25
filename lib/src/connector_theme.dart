@@ -80,16 +80,16 @@ class ConnectorThemeData with Diagnosticable {
       indent: lerpDouble(a?.indent, b?.indent, t),
     );
   }
-
   @override
   int get hashCode {
-    return hashValues(
-      color,
+    return Object.hashAll(
+     [ color,
       space,
       thickness,
-      indent,
+      indent,],
     );
   }
+
 
   @override
   bool operator ==(Object other) {
